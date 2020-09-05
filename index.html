@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<div id='cont'></div>
+<script src='annyang.min.js'></script>
+<script>
+	let cont = document.getElementById('cont');
+	function wr(num) {
+		cont.textContent = num
+	}
+if (annyang) {
+	
+  var commands = {
+  	'one': function() {
+  		console.log(1);
+  		wr(1)
+  	},
+  	'two': function() {
+  		console.log(2);
+  		wr(2)
+  	},
+  	'three': function() {
+  		console.log(3);
+  		wr(3)
+  	},
+  	'four': function() {
+  		console.log(4);
+  		wr(4)
+  	},
+  	'five': function() {
+  		console.log(5);
+  		wr(5)
+  	},
+  	'six': function() {
+  		console.log(6);
+  		wr(6)
+  	},
+  	'seven': function() {
+  		console.log(7);
+  		wr(7)
+  	},
+  	'eight': function() {
+  		console.log(8);
+  		wr(8)
+  	},
+  	'nine': function() {
+  		console.log(9);
+  		wr(9)
+  	},
+  	'zero': function() {
+  		console.log(0);
+  		wr(0)
+  	},
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start({ autoRestart: true, continuous: false });
+}
+</script>
+</body>
+</html>
